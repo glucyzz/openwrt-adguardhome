@@ -8,7 +8,7 @@ on:
 jobs:
   sync:
     name: Sync Upstream
-    if: github.repository_owner == 'glucyzz'
+    if: github.repository_owner == 'rufengsuixing'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -41,5 +41,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.OPENWRT_WORKFLOW_TOKEN }}
-          repository: glucyzz/openwrt-adguardhome
+          repository: rufengsuixing/openwrt-adguardhome
           event-type: build
